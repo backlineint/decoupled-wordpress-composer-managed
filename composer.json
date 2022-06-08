@@ -3,7 +3,7 @@
     "description": "WordPress core, powered by Bedrock, on Pantheon.",
     "type": "project",
     "license": "MIT",
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "repositories": [
         {
             "type": "composer",
@@ -17,6 +17,10 @@
             "type": "path",
             "url": "packages/*",
             "symlink": true
+        },
+        {
+          "type": "vcs",
+          "url": "https://github.com/pantheon-systems/wp-pantheon-decoupled.git"
         }
     ],
     "require": {
@@ -46,7 +50,8 @@
                 "type:wordpress-muplugin",
                 "wpackagist-plugin/lh-hsts",
                 "wpackagist-plugin/pantheon-advanced-page-cache",
-                "wpackagist-plugin/wp-native-php-sessions"
+                "wpackagist-plugin/wp-native-php-sessions",
+                "pantheon-systems/pantheon-decoupled"
             ],
             "web/wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
             "web/wp-content/themes/{$name}/": ["type:wordpress-theme"],

@@ -3,14 +3,20 @@
     "type": "project",
     "version": "1.0.0",
     "license": "MIT",
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "repositories": [
         {
             "type": "composer",
             "url": "https://wpackagist.org"
+        },
+        {
+          "type": "vcs",
+          "url": "https://github.com/pantheon-systems/wp-pantheon-decoupled.git"
         }
     ],
-    "require": {},
+    "require": {
+      "pantheon-systems/pantheon-decoupled": "dev-main"
+    },
     "extra": {
     }
 }
